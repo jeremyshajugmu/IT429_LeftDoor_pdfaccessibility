@@ -420,13 +420,13 @@ EOF
         BUILD_IMAGE="aws/codebuild/amazonlinux-x86_64-standard:5.0"
         COMPUTE_TYPE="BUILD_GENERAL1_SMALL"
         PRIVILEGED_MODE="false"
-        SOURCE_VERSION="pdf2html-subtree"  # Use pdf2html-subtree since buildspec only exists there
+        SOURCE_VERSION="mesne"  # Use pdf2html-subtree since buildspec only exists there
         BUILDSPEC_FILE="buildspec-unified.yml"
     else
         BUILD_IMAGE="aws/codebuild/amazonlinux2-x86_64-standard:5.0"
         COMPUTE_TYPE="BUILD_GENERAL1_LARGE"
         PRIVILEGED_MODE="true"
-        SOURCE_VERSION="pdf2html-subtree"
+        SOURCE_VERSION="msene"
         BUILDSPEC_FILE="buildspec-unified.yml"
     fi
 
@@ -453,6 +453,10 @@ EOF
     # Define source and artifacts
     SOURCE="{\"type\": \"GITHUB\", \"location\": \"$GITHUB_URL\", \"buildspec\": \"$BUILDSPEC_FILE\"}"
     ARTIFACTS='{"type": "NO_ARTIFACTS"}'
+# --- FORCE repo + branch for this deployment ---
+GITHUB_URL="https://github.com/jeremyshajugmu/IT429_LeftDoor_pdfaccessibility.git"
+SOURCE_VERSION="msene"
+# ----------------------------------------------
 
     print_status "📦 Project Configuration:"
     print_status "   Name: $PROJECT_NAME"
@@ -563,7 +567,7 @@ EOF
     done
 
     # Collect bucket information after successful deployment
-    if [ "$DEPLOYMENT_TYPE" == "pdf2pdf" ]; then
+    if [ "$DEPLOYMENT_TYPE" == "mesne" ]; then
         # Try multiple methods to get PDF-to-PDF bucket name
         print_status "🔍 Retrieving PDF-to-PDF bucket name..."
         
