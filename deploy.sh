@@ -672,7 +672,7 @@ deploy_ui() {
     export PROJECT_NAME="${PROJECT_NAME}-ui"
     export PDF_TO_PDF_BUCKET="$pdf_to_pdf_bucket"
     export PDF_TO_HTML_BUCKET="$pdf_to_html_bucket"
-    export TARGET_BRANCH="updatedUI"
+    export TARGET_BRANCH="msene"
     
     print_status "🚀 Starting UI deployment..."
     print_status "   This may take 10-15 minutes..."
@@ -861,7 +861,7 @@ print_success "✅ AWS credentials verified. Account: $ACCOUNT_ID, Region: $REGI
 echo ""
 
 # GitHub repository URL (hardcoded)
-GITHUB_URL="https://github.com/ASUCICREPO/PDF_Accessibility.git"
+GITHUB_URL="https://github.com/jeremyshajugmu/IT429_LeftDoor_pdfaccessibility.git"
 print_success "   Repository: $GITHUB_URL ✅"
 echo ""
 

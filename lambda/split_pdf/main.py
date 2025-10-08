@@ -9,6 +9,13 @@ The function performs the following operations:
 5. Starts an AWS Step Functions execution with metadata about the uploaded chunks.
 
 """
+0. Testing Code Deployment - LeftDoor msene
+
+This AWS Lambda function is triggered by an S3 event when a PDF file is uploaded to a specified S3 bucket.
+The function performs the following operations:
+1. Downloads the PDF file from S3.
+...
+"""
 import json
 import boto3
 import urllib.parse
