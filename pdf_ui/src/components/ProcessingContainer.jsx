@@ -145,7 +145,9 @@ const ProcessingContainer = ({
               sanitized = sanitized.replace(/__/g, '_');
             }
             // Remove leading/trailing underscores
-            sanitized = sanitized.replace(/^_+|_+$/g, '');
+            //sanitized = sanitized.replace(/^_+|_+$/g, '');
+            sanitized = sanitized.replace(/^_+/, '');  
+            sanitized = sanitized.replace(/_+$/, '');
             return sanitized;
           };
           objectKey = `remediated/final_${sanitizeForS3(updatedFilename.replace('.pdf', '.zip'))}`;
