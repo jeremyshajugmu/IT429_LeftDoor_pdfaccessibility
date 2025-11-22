@@ -187,7 +187,6 @@ export class CdkBackendStack extends cdk.Stack {
     const userPoolDomain = new cognito.CfnUserPoolDomain(this, 'PDF-Accessability-User-Pool-Domain', {
       domain: domainPrefix,
       userPoolId: userPool.userPoolId,
-      managedLoginVersion: 2,
     });
 
     const userPoolClient = userPool.addClient('PDF-Accessability-User-Pool-Client', {
