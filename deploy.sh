@@ -148,6 +148,18 @@ else
             "Effect": "Allow",
             "Action": ["sts:GetCallerIdentity", "sts:AssumeRole"],
             "Resource": "*"
+        },
+        {
+            "Sid": "ECRFullAccess",
+            "Effect": "Allow",
+            "Action": ["ecr:*"],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SSMFullAccess",
+            "Effect": "Allow",
+            "Action": ["ssm:*"],
+            "Resource": "*"
         }
     ]
 }'
