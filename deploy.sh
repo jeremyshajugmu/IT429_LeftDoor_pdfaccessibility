@@ -148,6 +148,18 @@ else
             "Effect": "Allow",
             "Action": ["sts:GetCallerIdentity", "sts:AssumeRole"],
             "Resource": "*"
+        },
+        {
+            "Sid": "ECRFullAccess",
+            "Effect": "Allow",
+            "Action": ["ecr:*"],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SSMFullAccess",
+            "Effect": "Allow",
+            "Action": ["ssm:*"],
+            "Resource": "*"
         }
     ]
 }'
@@ -209,7 +221,7 @@ BACKEND_ENVIRONMENT="$BACKEND_ENVIRONMENT"'}'
 # Backend buildspec
 BACKEND_SOURCE='{
   "type":"GITHUB",
-  "location":"https://github.com/ASUCICREPO/PDF_accessability_UI.git",
+  "location":"https://github.com/jeremyshajugmu/IT429_LeftDoor_pdfaccessibility",
   "buildspec":"buildspec.yml"
 }'
 

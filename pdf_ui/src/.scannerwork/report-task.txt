@@ -1,0 +1,6 @@
+projectKey=pdf-ui-accessibility
+serverUrl=http://localhost:9000
+serverVersion=25.10.0.114319
+dashboardUrl=http://localhost:9000/dashboard?id=pdf-ui-accessibility
+ceTaskId=6285a0d1-dff4-4766-8671-7ede19d53bcb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=6285a0d1-dff4-4766-8671-7ede19d53bcb
